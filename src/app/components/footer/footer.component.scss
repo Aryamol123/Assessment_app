@@ -1,0 +1,22 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+footer p,
+footer a {
+  color: #363636;
+}
+
+@media (max-width: 480px) {
+  footer {
+    display: block; 
+    width: 100%;
+    text-align: center;
+  }
+}

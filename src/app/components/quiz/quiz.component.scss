@@ -1,0 +1,237 @@
+.wrapper{
+  height: 100vh;
+  width: 100% ;
+  background-color: #FDF9F1;
+
+  font-family: Sofia Pro,sans-serif    ;
+    .stepper-container {   
+    width: 85%;
+
+    h3{
+      margin-top: 2rem;
+      font-size: 20px;
+    }
+
+    .step-content {
+      margin-left:  9rem ;
+      color: black;
+      font-size: 28px;
+      height: 350px;
+      overflow: hidden;
+      span{
+        font-size: 15px; 
+        padding: 5px;
+      }
+      .address{
+        width: 50%;
+        label{
+          font-size: 15px;
+        }
+        ::placeholder{
+          font-size:14px;
+        }
+      }
+    }
+    .stepper-buttons {
+      width: 70%;
+      margin:4rem 0 0 9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .btn{
+        width: 241px;
+        background-color:#FFD744;
+        color: #2C2C2C;
+        border: none;
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+  }
+  .checkbox-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    column-gap: 2px;
+    row-gap: 10px;
+    margin-top:5px;
+   
+    div {
+      display: flex;
+      align-items: center;
+    }
+  
+    input[type="checkbox"] {
+      margin-right: 8px;
+    }
+  }
+   .radio-buttons{
+    font-size: 15px;
+    
+   }
+
+  .stepper-buttons {
+    margin-top: 20px;
+    
+  }
+  
+  .progress-container {
+    width: 65%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin: 20px 0 0 9rem;
+    position: relative;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #20c997; 
+    border-radius: 5px;
+    transition: width 0.4s ease;
+  }
+  
+  .progress-text {
+    font-size: 12px;
+    color: #666;
+    text-align: left;
+    margin: 5px 0 0 9rem;
+  }
+  .movie-input-container {
+    width: 72%;
+    max-height: 200px; 
+    overflow-y: auto;
+
+  }
+  
+  .movie-fields {
+    display: flex;
+    justify-content: space-between;
+    div{
+      width: 100% !important; 
+      padding: 5px;
+    }
+    label{
+      font-size: 13px;
+    }
+    input{
+      width: 100% !important; 
+      font-size: 18px;
+    }
+    ::placeholder{
+      font-size: 14px;
+    }
+  }
+
+  .add-movie {
+    background-color: transparent;
+    color: #363636;
+    border:  1.5px solid #22549F;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 10px;
+    
+  }
+  
+  .stepper-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 618px) {
+    .wrapper {
+      height: auto;
+    }
+    .stepper-container {
+      width: 95%;
+      padding: 10px;
+      
+      h3 {
+        font-size: 18px;
+      }
+
+      .step-content {
+        font-size: 20px;
+        margin: 0 auto;
+        width: 90%;
+        height: 300px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        input[type="text"] {
+          font-size: 14px;
+        }
+
+        label {
+          font-size: 12px;
+        }
+      }
+
+      .stepper-buttons {
+        width: 100%;
+        margin: 2rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        
+        button {
+          width: 100%;
+          font-size: 12px;
+        }
+
+        a {
+          font-size: 12px;
+          order: 2;
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .progress-container {
+      width: 90%; 
+      margin: 10px auto; 
+    }
+
+    .progress-text {
+      margin-left: 26px;
+      font-size: 10px;
+    }
+
+    .checkbox-grid {
+      grid-template-columns: 1fr;
+      margin-top: 15px;
+    }
+
+    .radio-buttons {
+      font-size: 12px;
+     
+      .col-4,
+      .col-5 {
+        margin-top: 2px;
+        width: 100%;
+
+        label {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .movie-input-container {
+      width: 100%;
+
+      input[type="text"] {
+        font-size: 14px;
+      }
+    }
+    .address {
+      width: 100%;
+      label {
+        font-size: 13px;
+      }
+
+      input {
+        font-size: 12px;
+      }
+    }
+  }
+}
