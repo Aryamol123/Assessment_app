@@ -61,6 +61,26 @@ export class QuizComponent {
     }
   };
 
+  isStepValid(): boolean {
+    const step = this.steps[this.currentStep - 1];
+  
+    switch (step.type) {
+      case 'checkbox':
+        return this.formData.genres.length > 0; // At least one genre selected
+      case 'radio':
+        if (this.currentStep === 2) {
+          return !!this.formData.developerExperience; // Developer experience is selected
+        }
+        return !!this.formData.movieSnack; // Movie snack is selected
+      case 'text':
+        return this.movies.some((movie) => movie.title && movie.releaseYear); // At least one movie has title and year
+      case 'address':
+        const { address1, city, state, zipcode } = this.formData.address;
+        return address1 && city && state && zipcode; // All address fields must be filled
+      default:
+        return true;
+    }
+  }
   constructor(private router: Router) {}
 
   calculateProgress(): number {
@@ -68,7 +88,7 @@ export class QuizComponent {
   }
 
   nextStep() {
-    if (this.currentStep < this.totalSteps) {
+    if (this.isStepValid() && this.currentStep < this.totalSteps) {
       this.currentStep++;
     } else {
       this.router.navigate(['/quiz-completion']);

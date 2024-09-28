@@ -160,7 +160,7 @@
           <div class="col-md-4 mb-2">
             <label for="zipcode" class="form-label">Zip Code</label>
             <input
-              type="text"
+              type="number"
               id="zipcode"
               class="form-control"
               placeholder="Zip Code"
@@ -179,7 +179,7 @@
         <a class="text-decoration-none cursor-pointer" (click)="prevStep()">
           ← Previous Question</a>
       </ng-container>
-      <button class="btn btn-primary" (click)="nextStep()">Next</button>
+      <button class="btn btn-primary" (click)="nextStep()" [disabled]="!isStepValid()">Next</button>
     </div>
   </div>
 </div>
