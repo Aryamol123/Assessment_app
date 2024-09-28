@@ -48,6 +48,9 @@
       }
     }
   }
+  .cursor-pointer{
+    cursor: pointer;
+  }
   .checkbox-grid {
     display: grid;
     grid-template-columns: 1fr 1fr; 
@@ -177,12 +180,14 @@
         button {
           width: 100%;
           font-size: 12px;
+          margin-left: 15px;
         }
 
         a {
           font-size: 12px;
           order: 2;
           margin-top: 10px;
+           margin-left: 15px;
         }
       }
     }
@@ -219,9 +224,10 @@
     .movie-input-container {
       width: 100%;
 
-      input[type="text"] {
+      input[type="text"],input[type="number"] {
         font-size: 14px;
       }
+      
     }
     .address {
       width: 100%;

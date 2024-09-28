@@ -100,7 +100,7 @@
                   >Year of Release</label
                 >
                 <input
-                  type="text"
+                  type="number"
                   [(ngModel)]="movies[i].releaseYear"
                   class="form-control"
                   id="releaseYear-{{ i }}"
@@ -175,10 +175,9 @@
       <ng-container *ngIf="currentStep === 1">
         <a href="#" class="text-decoration-none">Exit assessment</a>
       </ng-container>
-      <ng-container *ngIf="currentStep > 1">
+      <ng-container *ngIf="currentStep > 1" >
         <a class="text-decoration-none cursor-pointer" (click)="prevStep()">
-          ← Previous Question</a
-        >
+          ← Previous Question</a>
       </ng-container>
       <button class="btn btn-primary" (click)="nextStep()">Next</button>
     </div>
