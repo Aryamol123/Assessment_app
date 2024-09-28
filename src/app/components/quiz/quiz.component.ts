@@ -91,6 +91,7 @@ export class QuizComponent {
     if (this.isStepValid() && this.currentStep < this.totalSteps) {
       this.currentStep++;
     } else {
+      console.log('Quiz Answers:', this.formData);
       this.router.navigate(['/quiz-completion']);
     }
   }
